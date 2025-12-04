@@ -131,16 +131,6 @@ imprimir (Potencia a n) = "(" ++ (imprimir a) ++ " ^ " ++ (show n) ++ ")"
 -- let parse_out  = parse (tokenize prefixa)
 -- let expr = fst parse_out
 -- simplificar (derivar expr "x")
-
-expToString :: Expressao -> String
-expToString (Const n) = show n -- converte um unico numero p texto
-expToString (Var x)   = x -- retorna a mesma variavel
-expToString (Soma e1 e2) =
-    "(" ++ expToString e1 ++ " + " ++ expToString e2 ++ ")"
-expToString (Produto e1 e2) =
-    "(" ++ expToString e1 ++ " * " ++ expToString e2 ++ ")"
-expToString (Potencia e n) =
-    "(" ++ expToString e ++ " ^ " ++ show n ++ ")"
     
 main :: IO ()
 main = do
